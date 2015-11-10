@@ -3,10 +3,6 @@ import pifacedigitalio
 app = Flask(__name__)
 pifacedigital = pifacedigitalio.PiFaceDigital()
 
-@app.route("/hello")
-def hello2():
-    return "Hello World!"
-
 @app.route("/", methods=['GET', 'POST'])
 def hello():
     if request.method == 'POST':
